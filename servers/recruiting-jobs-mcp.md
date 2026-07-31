@@ -19,7 +19,7 @@ Bearer token. You are billed on your own Apify account, per result delivered.
 - `search_jobs_cutshort`: Search CutShort for Indian tech and startup roles. Returns skill tags, INR salary bands, experience ranges and remote fl
 - `search_jobs_indeed`: Search Indeed, the widest job board available here, across eight country sites. Returns salary text as published, job ty
 - `search_jobs_simplyhired`: Search SimplyHired US job postings: title, company, location, salary text as published, and posting age. A second sweep 
-- `find_candidates`: Find people at a company by job title — a sourcing list with names, roles, and profile URLs. No cookies required.
+- `find_candidates`: Find people at a company by job title, a sourcing list with names, roles, and profile URLs. No cookies required.
 - `enrich_profile`: Enrich a LinkedIn profile URL into structured data: name, headline, current role, experience, and skills.
 - `company_snapshot`: Employer snapshot for recruiting: LinkedIn company profile (size, industry) plus AmbitionBox employee ratings and salary
 - `hiring_signals_report`: Is this company hiring, and for what? Live ATS postings, LinkedIn postings, and an employer snapshot in one call. Billed

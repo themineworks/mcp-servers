@@ -1,6 +1,6 @@
 # Real Estate MCP
 
-The Zillow API that doesn't exist — listings, solds, rentals, comps, Redfin, Realtor.com and Airbnb supply behind one MCP endpoint. No result, no charge.
+The Zillow API that doesn't exist. Listings, solds, rentals, comps, Redfin, Realtor.com and Airbnb supply behind one MCP endpoint. No result, no charge.
 
 **Endpoint**
 
@@ -14,12 +14,12 @@ Bearer token. You are billed on your own Apify account, per result delivered.
 ## Tools (8)
 
 - `search_listings`: Search homes for sale on Zillow by location, with price, bedroom, and property-type filters.
-- `recently_sold`: Recently sold homes on Zillow — the comparables an agent or investor actually needs to price a property.
+- `recently_sold`: Recently sold homes on Zillow, the comparables an agent or investor actually needs to price a property.
 - `rental_listings`: Rental listings on Zillow by location, with rent range and bedroom filters.
 - `property_details`: Full detail for specific Zillow listings: Zestimate, price history, tax history, and assigned schools.
-- `redfin_search`: Search Redfin for-sale or recently-sold listings by location — a second opinion on Zillow data.
+- `redfin_search`: Search Redfin for-sale or recently-sold listings by location, a second opinion on Zillow data.
 - `realtor_search`: Search Realtor.com listings by location, for sale or sold.
-- `str_market`: Short-term rental supply on Airbnb for a location: nightly prices, ratings, and availability — the STR side of an invest
+- `str_market`: Short-term rental supply on Airbnb for a location: nightly prices, ratings, and availability, the STR side of an invest
 - `market_report`: One-call market picture for a location: active listings, recent solds, rentals, and short-term rental supply. Billed by 
 
 ## Pricing

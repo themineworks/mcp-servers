@@ -1,6 +1,6 @@
 # Social & Market Research MCP
 
-What the internet is saying — Reddit, X, Threads, LinkedIn, YouTube transcripts, Google News and Trends behind one MCP endpoint. No result, no charge.
+What the internet is saying: Reddit, X, Threads, LinkedIn, YouTube transcripts, Google News and Trends behind one MCP endpoint. No result, no charge.
 
 **Endpoint**
 
@@ -16,10 +16,10 @@ Bearer token. You are billed on your own Apify account, per result delivered.
 - `search_reddit`: Search Reddit posts by keyword or pull a subreddit feed, with scores, timestamps, and optional top comments. What people
 - `search_x`: Search X (Twitter) posts by keyword or pull a specific account timeline, with engagement metrics.
 - `search_threads`: Search Threads posts by keyword or hashtag, or pull a profile feed.
-- `youtube_transcript`: Fetch the transcript of a YouTube video — the full spoken text, optionally with timestamps. No API key needed.
+- `youtube_transcript`: Fetch the transcript of a YouTube video, the full spoken text, optionally with timestamps. No API key needed.
 - `google_trends`: Google Trends interest for one or more keywords: interest over time, related queries and topics, and regional breakdown.
 - `news_search`: Search Google News for recent coverage of a brand, topic, or event, with source and publication date.
-- `linkedin_posts`: Search public LinkedIn posts by keyword — what professionals and companies are posting about a topic.
+- `linkedin_posts`: Search public LinkedIn posts by keyword, what professionals and companies are posting about a topic.
 - `brand_pulse_report`: What the internet is saying about a brand or topic right now: Reddit, X, Threads, LinkedIn, news, and search interest in
 
 ## Pricing
