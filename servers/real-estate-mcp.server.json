@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.themineworks/real-estate",
+  "description": "The Zillow API that doesn't exist \u2014 listings, solds, rentals, comps, Redfin, Realtor.com and Airbnb supply behind one MCP endpoint. No result, no charge.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/themineworks/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://themineworks--real-estate-mcp.apify.actor/mcp"
+    }
+  ]
+}

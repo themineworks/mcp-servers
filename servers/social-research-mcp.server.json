@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.themineworks/social-research",
+  "description": "What the internet is saying \u2014 Reddit, X, Threads, LinkedIn, YouTube transcripts, Google News and Trends behind one MCP endpoint. No result, no charge.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/themineworks/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://themineworks--social-research-mcp.apify.actor/mcp"
+    }
+  ]
+}

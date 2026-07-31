@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.themineworks/recruiting-jobs",
+  "description": "Live job-market data for recruiting agents: ATS postings (Greenhouse/Lever/Workday/Ashby), LinkedIn jobs, Naukri, candidate sourcing, and employer snapshots. No result, no charge.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/themineworks/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://themineworks--recruiting-jobs-mcp.apify.actor/mcp"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.themineworks/lead-generation",
+  "description": "B2B and local lead generation for AI agents: people with verified emails, website contacts, Google Maps and Yellow Pages leads, and Trustpilot reputation. No result, no charge.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/themineworks/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://themineworks--lead-generation-mcp.apify.actor/mcp"
+    }
+  ]
+}

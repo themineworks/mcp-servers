@@ -1,0 +1,16 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "com.themineworks/academic-research",
+  "description": "Scholarly search for AI agents: OpenAlex works, Crossref metadata, arXiv preprints, OpenCitations graphs and PubMed, behind one MCP endpoint. No result, no charge.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/themineworks/mcp-servers",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://themineworks--academic-research-mcp.apify.actor/mcp"
+    }
+  ]
+}
