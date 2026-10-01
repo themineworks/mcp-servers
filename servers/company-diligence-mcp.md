@@ -1,54 +1,20 @@
 # Company Diligence MCP
 
-Official-registry company diligence for AI agents: SEC EDGAR, GLEIF LEI, EU VAT, court records, federal awards, reputation. No result, no charge.
+Company diligence from official sources: SEC EDGAR, GLEIF LEI, EU VIES VAT, US state registries, UK Companies House, CourtListener, USAspending, SAM.gov and FEC, plus Trustpilot and news.
 
-**Endpoint**
+13 tools. Pay per call on Apify, billed to your own Apify account.
+Current prices: https://apify.com/themineworks/company-diligence-mcp
 
-```
-https://themineworks--company-diligence-mcp.apify.actor/mcp
-```
+## Connect
 
-Transport is streamable HTTP. Authenticate with your own Apify API token as a
-Bearer token. You are billed on your own Apify account, per result delivered.
-
-## Tools (10)
-
-- `resolve_company`: Resolve a company name to verified identifiers and registry records (LEI, SEC EDGAR CIK, national registries). Grounds a
-- `get_sec_filings`: Fetch SEC EDGAR filings (10-K, 10-Q, 8-K, …) for a company by ticker or CIK, newest first.
-- `search_filings_fulltext`: Full-text keyword search across SEC EDGAR filings (what the EDGAR UI calls EFTS).
-- `verify_vat`: Validate an EU VAT number against the official VIES service. A well-formed "invalid" verdict is a result; only service f
-- `get_lei_record`: Look up Legal Entity Identifier (LEI) records from GLEIF by company name or exact LEI code.
-- `get_state_registration`: Look up a company in official US state business registries: entity status, type, formation date, registered agent, princ
-- `get_court_records`: US federal and state court opinions and dockets from CourtListener, filtered by query, court, and date.
-- `get_federal_awards`: US federal contracts, grants, and awards for a recipient company from USAspending.gov.
-- `get_reputation`: Company reputation snapshot: Trustpilot rating and recent reviews plus recent news coverage. Trustpilot requires the com
-- `full_diligence_report`: One-call company dossier: identity resolution, LEI, US state registrations (officers & agents), SEC filings + full-text 
-
-## Pricing
-
-| Event | Price (FREE tier) | Billing |
-|---|---|---|
-| `full_diligence_report` | $0.5 | per call |
-| `get_court_records` | $0.12 | per event |
-| `get_federal_awards` | $0.1 | per event |
-| `get_lei_record` | $0.05 | per event |
-| `get_reputation` | $0.12 | per event |
-| `get_sec_filings` | $0.08 | per event |
-| `resolve_company` | $0.1 | per event |
-| `search_filings_fulltext` | $0.1 | per event |
-| `verify_vat` | $0.05 | per event |
-
-Prices shown are the FREE tier, which is the maximum anyone pays. Apify applies
-tiered discounts (BRONZE, SILVER, GOLD and above) automatically based on your
-plan. Your tier is shown on your Apify billing page.
-
-**No result, no charge.** A tool call that returns nothing fires no billable
-event.
-
-## Client configuration
-
-Claude Desktop, Cursor, Windsurf and any MCP client that supports remote
+Easiest, with Apify sign in (OAuth), in any client that supports remote MCP
 servers:
+
+```
+https://mcp.apify.com/?tools=themineworks/company-diligence-mcp
+```
+
+Direct, with your Apify API token as a Bearer token:
 
 ```json
 {
@@ -61,22 +27,26 @@ servers:
 }
 ```
 
-## Underlying Actors (10)
+Transport is streamable HTTP. Get a token at
+https://console.apify.com/account/integrations.
 
-Each tool calls one of our published Apify Actors. They can also be used
-directly if you only need one source.
+## Tools (13)
 
-- `themineworks/company-identity-resolver`
-- `themineworks/courtlistener-court-records`
-- `themineworks/eu-vat-vies-validator`
-- `themineworks/gleif-lei-lookup`
-- `themineworks/google-news`
-- `themineworks/sec-edgar-filings`
-- `themineworks/sec-edgar-fulltext-search`
-- `themineworks/trustpilot-reviews`
-- `themineworks/us-state-business-registry`
-- `themineworks/usaspending-federal-awards`
+- `resolve_company`: Resolve a company name to verified identifiers and registry records (LEI, SEC EDGAR CIK, national registries).
+- `get_state_registration`: Look up a company in official US state business registries: entity status, type, formation date, registered agent, principal address, and officers where the state publishes them.
+- `get_sec_filings`: Fetch SEC filings for one known company, by ticker or CIK, newest first.
+- `search_filings_fulltext`: Search the text inside SEC filings across all companies for a phrase, such as a product name, an executive or a risk factor.
+- `verify_vat`: Validate an EU VAT number against the official VIES service.
+- `get_lei_record`: Look up a company's Legal Entity Identifier (LEI) in GLEIF, the global registry, by legal name or exact LEI code.
+- `get_court_records`: US court opinions and dockets from CourtListener, by party name, phrase, court, or date.
+- `get_federal_awards`: US federal contracts, grants and loans awarded to a company, from USAspending.gov.
+- `get_federal_contracts`: Search live US federal contract opportunities on SAM.gov by keyword, NAICS code, notice type or agency. Needs your own free SAM.gov API key.
+- `get_campaign_finance`: Search US federal campaign finance via the official OpenFEC API: candidates by name, committees/PACs by name, or itemized Schedule A contributions for one committee.
+- `get_uk_company_registration`: Look up UK companies on the official Companies House register: status, incorporation date, registered address, SIC codes and officers. Needs your own free Companies House API key.
+- `get_reputation`: Company reputation snapshot: Trustpilot rating and recent reviews plus recent news coverage.
+- `full_diligence_report`: One-call company dossier: identity resolution, LEI, US state registrations (officers & agents), SEC filings + full-text mentions, court records, federal awards, VAT (if given), and reputation.
 
-## Store listing
+## Listings
 
-https://apify.com/themineworks/company-diligence-mcp
+- Apify Store: https://apify.com/themineworks/company-diligence-mcp
+- MCP Registry: `com.themineworks/company-diligence-mcp`

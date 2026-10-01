@@ -1,8 +1,8 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "com.themineworks/recruiting-jobs",
-  "description": "Live job-market data for recruiting agents: ATS postings (Greenhouse/Lever/Workday/Ashby), LinkedIn jobs, Naukri, candidate sourcing, and employer snapshots. No result, no charge.",
-  "version": "1.0.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.themineworks/recruiting-jobs-mcp",
+  "description": "Recruiting data: ATS postings, LinkedIn, Indeed, SimplyHired, Naukri, sourcing. 10 tools.",
+  "websiteUrl": "https://apify.com/themineworks/recruiting-jobs-mcp",
   "repository": {
     "url": "https://github.com/themineworks/mcp-servers",
     "source": "github"
@@ -10,7 +10,15 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://themineworks--recruiting-jobs-mcp.apify.actor/mcp"
+      "url": "https://themineworks--recruiting-jobs-mcp.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Apify API token as a Bearer credential. Get one at https://console.apify.com/account/integrations. Calls bill to your own Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ]
 }

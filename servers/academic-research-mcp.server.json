@@ -1,8 +1,8 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "com.themineworks/academic-research",
-  "description": "Scholarly search for AI agents: OpenAlex works, Crossref metadata, arXiv preprints, OpenCitations graphs and PubMed, behind one MCP endpoint. No result, no charge.",
-  "version": "1.0.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.themineworks/academic-research-mcp",
+  "description": "Scholarly search: OpenAlex, Crossref, arXiv, OpenCitations and PubMed. 6 tools.",
+  "websiteUrl": "https://apify.com/themineworks/academic-research-mcp",
   "repository": {
     "url": "https://github.com/themineworks/mcp-servers",
     "source": "github"
@@ -10,7 +10,15 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://themineworks--academic-research-mcp.apify.actor/mcp"
+      "url": "https://themineworks--academic-research-mcp.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Apify API token as a Bearer credential. Get one at https://console.apify.com/account/integrations. Calls bill to your own Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "com.themineworks/ecommerce-intel",
-  "description": "Product intelligence for AI agents: Amazon products and reviews, AliExpress supplier prices, Shopify catalogs, TikTok Shop, Meta Ad Library competitor ads, and search interest. No result, no charge.",
-  "version": "1.0.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.themineworks/ecommerce-intel-mcp",
+  "description": "Product research: Amazon, AliExpress, Shopify, TikTok Shop, Meta ads, Trends. 8 tools.",
+  "websiteUrl": "https://apify.com/themineworks/ecommerce-intel-mcp",
   "repository": {
     "url": "https://github.com/themineworks/mcp-servers",
     "source": "github"
@@ -10,7 +10,15 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://themineworks--ecommerce-intel-mcp.apify.actor/mcp"
+      "url": "https://themineworks--ecommerce-intel-mcp.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Apify API token as a Bearer credential. Get one at https://console.apify.com/account/integrations. Calls bill to your own Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ]
 }

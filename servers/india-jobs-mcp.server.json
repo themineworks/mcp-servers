@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "com.themineworks/real-estate-mcp",
-  "description": "US property data: Zillow, Redfin, Realtor.com listings, sales, rentals, Airbnb. 8 tools.",
-  "websiteUrl": "https://apify.com/themineworks/real-estate-mcp",
+  "name": "com.themineworks/india-jobs-mcp",
+  "description": "India job data: 9 job boards, LinkedIn sourcing and AmbitionBox employer snapshots. 14 tools.",
+  "websiteUrl": "https://apify.com/themineworks/india-jobs-mcp",
   "repository": {
     "url": "https://github.com/themineworks/mcp-servers",
     "source": "github"
@@ -10,7 +10,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://themineworks--real-estate-mcp.apify.actor/mcp",
+      "url": "https://themineworks--india-jobs-mcp.apify.actor/mcp",
       "headers": [
         {
           "name": "Authorization",

@@ -1,8 +1,8 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "com.themineworks/lead-generation",
-  "description": "B2B and local lead generation for AI agents: people with verified emails, website contacts, Google Maps and Yellow Pages leads, and Trustpilot reputation. No result, no charge.",
-  "version": "1.0.0",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.themineworks/lead-generation-mcp",
+  "description": "Lead generation: work emails, verification, site contacts, Maps, Yellow Pages. 8 tools.",
+  "websiteUrl": "https://apify.com/themineworks/lead-generation-mcp",
   "repository": {
     "url": "https://github.com/themineworks/mcp-servers",
     "source": "github"
@@ -10,7 +10,15 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://themineworks--lead-generation-mcp.apify.actor/mcp"
+      "url": "https://themineworks--lead-generation-mcp.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Apify API token as a Bearer credential. Get one at https://console.apify.com/account/integrations. Calls bill to your own Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
     }
   ]
 }
